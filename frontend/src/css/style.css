@@ -1,0 +1,25 @@
+.contact-list {
+    list-style-type: none;
+    display:flex;
+    flex-wrap: wrap;
+}
+.contact-list-item {
+    width: 100%;
+    display:flex;
+    margin-bottom: 10px;
+    margin-left: 15px;
+}
+.contact-avatar {
+    border: 1px solid #eee;
+    border-radius: 100%;
+    width: 100%;
+    max-width: 128px;
+    height:100%;
+    min-height: 128px;
+    margin-left: 10px;
+
+}
+
+.contact-remove {
+
+}
