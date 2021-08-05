@@ -1,3 +1,13 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color:#686868;
+}
+body, html {
+    border: 0;
+    margin:0;
+}
 .contact-list {
     list-style-type: none;
     display:flex;
@@ -8,38 +18,42 @@
 .contact-list-item {
     width: 100%;
     display:flex;
-    margin-bottom: 20px;
-    margin-left: 15px;
+    margin:0 5px 10px 0;
+    background-color: #fff;
+    border-radius: 5px;
+    align-items:center;
 }
 .contact-avatar {
     border: 1px solid #eee;
-    border-radius: 100%;
+    border-radius: 50%;
     width: 100%;
-    max-width: 128px;
-    height:100%;
-    min-height: 128px;
+    max-width:100px;
+    height:100px;
     margin-left: 5px;
     background-color:#eee;
 }
 .contact-details {
     align-items: center;
-    margin-left: 1.5rem;
+    margin-left: 1rem;
     border-left: 1px solid #EEE;
-    padding: 15px;
-    font-size: 20px;
+    padding: 10px;
+    font-size: 15px;
     width: 100%;
 }
 
 .contact-remove {
+    display:flex;
+    align-items: center;
     border: none;
     border-radius:100%;
     background-color: #757575;
     color:#fff;
-    margin-right: 20px;
-    width:35px;
-    height:30px;
+    margin-right: 15px;
+    width:20px;
+    height:20px;
     align-self: center;
     cursor: pointer;
+    font-size: 0.6rem;
 }
 .search-contacts {
     width: 100%;
@@ -64,4 +78,18 @@
 }
 .list-contacts-top {
     display:flex;
+    background-color:#fff;
+    height:40px;
+    align-items: center;
+}
+.show-user-button {
+    display: flex;
+    justify-content: center;
+}
+.show-user-button button {
+    margin-left: 5px;
+    border: none;
+    background-color: transparent;
+    color: red;
+
 }

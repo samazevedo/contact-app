@@ -16,6 +16,9 @@ class ListContacts extends React.Component {
             query: query.trim()
         }))
     }
+    clearQuery = () => {
+        this.udpateQuery('')
+    }
     render() {
         const { query } = this.state
         const { contacts, onDeleteContact } = this.props
@@ -37,6 +40,16 @@ class ListContacts extends React.Component {
                         value={this.state.query}
                         onChange={(event) => this.udpateQuery(event.target.value)} />
                     <img src={addUser} alt=" Add User Icon" className="add-user-icon" />
+                </div>
+                <div className="show-user-button">
+                    {showingContacts.length !== contacts.length && (
+                        <div className='showing-contacts'>
+                            <span>
+                                Now showing {showingContacts.length} of {contacts.length}
+                            </span>
+                            <button onClick={this.clearQuery}>Show all</button>
+                        </div>
+                    )}
                 </div>
                 <ol className="contact-list" >
                     {showingContacts.map((contact) => (
