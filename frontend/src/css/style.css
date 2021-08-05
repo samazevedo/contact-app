@@ -47,11 +47,9 @@
     height: 1.5rem;
     padding: 10px;
     border: none;
+    outline: none;
 }
 
-.search-contacts input:focus {
-    border: none;
-}
 .search-icon {
     width: 20px;
     height:20px;

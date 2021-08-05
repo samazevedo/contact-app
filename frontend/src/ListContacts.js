@@ -17,9 +17,17 @@ class ListContacts extends React.Component {
         }))
     }
     render() {
+        const { query } = this.state
+        const { contacts, onDeleteContact } = this.props
+        const showingContacts = query === ''
+            ? contacts
+            : contacts.filter((c) => (
+                c.name.toLowerCase().includes(query.toLowerCase())
+            ))
+
+
         return (
             <div className='list-contacts'>
-                {JSON.stringify(this.state)}
                 <div className="list-contacts-top">
                     <img src={SearchIcon} alt="Search Icon" className="search-icon" />
                     <input
@@ -31,7 +39,7 @@ class ListContacts extends React.Component {
                     <img src={addUser} alt=" Add User Icon" className="add-user-icon" />
                 </div>
                 <ol className="contact-list" >
-                    {this.props.contacts.map((contact) => (
+                    {showingContacts.map((contact) => (
                         <li key={contact.id} className='contact-list-item'>
                             <div className='contact-avatar'
                                 style={{
@@ -44,7 +52,7 @@ class ListContacts extends React.Component {
                             </div>
                             <button
                                 className="contact-remove"
-                                onClick={() => this.props.onDeleteContact(contact)}>
+                                onClick={() => onDeleteContact(contact)}>
                                 X
                             </button>
                         </li>
