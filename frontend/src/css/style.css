@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 body {
-    background-color: #686868;
+    background-color: #ccc7c7;
 }
 body,
 html {
@@ -97,4 +97,45 @@ html {
     border: none;
     background-color: transparent;
     color: red;
+}
+.close-create-contact img {
+    margin: 10px 0 0 10px;
+}
+.create-contact-details {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.create-contact-details input {
+    width: 100%;
+    margin: 10px 30px 3px 30px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #b1b1b1ee;
+}
+.create-contact-details input:focus {
+    outline: none;
+}
+.create-contact-details button {
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    color: #eeeeee;
+    background-color: #606081;
+    margin-top: 5px;
+    justify-self: start;
+    transition: 0.5s;
+    position: relative;
+}
+.create-contact-details button:active {
+    font-size: 12px;
+}
+.create-contact-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.create-contact-form img {
 }
