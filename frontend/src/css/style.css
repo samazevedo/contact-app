@@ -134,8 +134,8 @@ html {
 }
 .create-contact-form {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-}
-.create-contact-form img {
+    margin: 30px;
 }
