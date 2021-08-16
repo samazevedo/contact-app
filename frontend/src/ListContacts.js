@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import SearchIcon from './icons/search-icon.gif'
 import addUser from './icons/add-user.png'
+import { Link } from 'react-router-dom'
 
 class ListContacts extends React.Component {
     static propType = {
@@ -21,7 +22,7 @@ class ListContacts extends React.Component {
     }
     render() {
         const { query } = this.state
-        const { contacts, onDeleteContact, onNavigate } = this.props
+        const { contacts, onDeleteContact } = this.props
         const showingContacts =
             query === ''
                 ? contacts
@@ -46,17 +47,13 @@ class ListContacts extends React.Component {
                             this.udpateQuery(event.target.value)
                         }
                     />
-                    <a
-                        href="#create"
-                        onClick={onNavigate}
-                        className="add-contact"
-                    >
+                    <Link to="/create" className="add-contact">
                         <img
                             src={addUser}
                             alt=" Add User Icon"
                             className="add-user-icon"
                         />
-                    </a>
+                    </Link>
                 </div>
                 <div className="show-user-button">
                     {showingContacts.length !== contacts.length && (
